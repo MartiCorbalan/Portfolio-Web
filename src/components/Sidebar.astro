@@ -1,11 +1,11 @@
 <nav class="menu py-4 px-8 relative shadow-2xl bg-slate-900">
   <div class="flex items-center justify-between w-full">
-    <!-- Logo/Nombre -->
+    
     <div class="text-purple-400 font-bold text-2xl z-10 relative hover:text-pink-400 transition-colors">
       My Portfolio
     </div>
 
-    <!-- Menú de escritorio (a la derecha) usando flex -->
+    
     <div class="hidden sm:flex space-x-8 z-10 relative items-center ml-auto flex-grow justify-end">
       <a href="/" class="group relative flex items-center space-x-2 text-slate-300 font-medium tracking-wide hover:text-white transition-colors">
         <div class="relative px-4 py-2">About me</div>
@@ -57,7 +57,7 @@
   </div>
 </nav>
 
-<!-- Script de JavaScript al final del body -->
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
@@ -76,17 +76,6 @@
       });
     }
 
-    // Cambiar tema (modo terminal)
-    function toggleTheme() {
-      document.body.classList.toggle('terminal-mode');
-    }
-
-    if (themeToggle) {
-      themeToggle.addEventListener('click', toggleTheme);
-    }
-
-    if (themeToggleMobile) {
-      themeToggleMobile.addEventListener('click', toggleTheme);
-    }
+    
   });
 </script>
