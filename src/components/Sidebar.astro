@@ -1,0 +1,92 @@
+<nav class="menu py-4 px-8 relative shadow-2xl bg-slate-900">
+  <div class="flex items-center justify-between w-full">
+    <!-- Logo/Nombre -->
+    <div class="text-purple-400 font-bold text-2xl z-10 relative hover:text-pink-400 transition-colors">
+      My Portfolio
+    </div>
+
+    <!-- Menú de escritorio (a la derecha) usando flex -->
+    <div class="hidden sm:flex space-x-8 z-10 relative items-center ml-auto flex-grow justify-end">
+      <a href="/" class="group relative flex items-center space-x-2 text-slate-300 font-medium tracking-wide hover:text-white transition-colors">
+        <div class="relative px-4 py-2">About me</div>
+        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300 group-hover:w-full"></div>
+      </a>
+      <a href="#Experiencia" class="group relative flex items-center space-x-2 text-slate-300 font-medium tracking-wide hover:text-white transition-colors">
+        <div class="relative px-4 py-2">Experiéncia</div>
+        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300 group-hover:w-full"></div>
+      </a>
+      <a href="#Educacion" class="group relative flex items-center space-x-2 text-slate-300 font-medium tracking-wide hover:text-white transition-colors">
+        <div class="relative px-4 py-2">Educación</div>
+        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300 group-hover:w-full"></div>
+      </a>
+      <a href="#Proyectos" class="group relative flex items-center space-x-2 text-slate-300 font-medium tracking-wide hover:text-white transition-colors">
+        <div class="relative px-4 py-2">Projects</div>
+        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300 group-hover:w-full"></div>
+      </a>
+      <a href="#Contacto" class="group relative flex items-center space-x-2 text-slate-300 font-medium tracking-wide hover:text-white transition-colors">
+        <div class="relative px-4 py-2">Contact</div>
+        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300 group-hover:w-full"></div>
+      </a>
+
+      
+    </div>
+  </div>
+
+  <!-- Menú de móvil (hamburguesa) -->
+  <button class="sm:hidden text-white z-10 absolute top-4 right-4" id="menu-toggle">
+    <span class="block w-6 h-1 mb-1 bg-white transition-transform duration-300"></span>
+    <span class="block w-6 h-1 mb-1 bg-white transition-transform duration-300"></span>
+    <span class="block w-6 h-1 bg-white transition-transform duration-300"></span>
+  </button>
+
+  <!-- Menú móvil desplegable -->
+  <div class="sm:hidden absolute top-16 left-0 w-full bg-slate-900/80 backdrop-blur-lg text-white hidden z-10 shadow-lg rounded-b-lg transition-all duration-500 transform translate-y-[-50px]" id="mobile-menu">
+    <div class="flex flex-col space-y-4 py-6">
+      <a href="/" class="block text-center py-3 px-4 hover:bg-purple-500/20 hover:text-pink-400 transition-colors transform hover:scale-105">
+        About me
+      </a>
+      <a href="/projects" class="block text-center py-3 px-4 hover:bg-purple-500/20 hover:text-pink-400 transition-colors transform hover:scale-105">
+        Projects
+      </a>
+      <a href="/contact" class="block text-center py-3 px-4 hover:bg-purple-500/20 hover:text-pink-400 transition-colors transform hover:scale-105">
+        Contact
+      </a>
+
+      
+    </div>
+  </div>
+</nav>
+
+<!-- Script de JavaScript al final del body -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+    // Toggle menú móvil
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        if (mobileMenu) {
+          mobileMenu.classList.toggle('hidden');
+          mobileMenu.classList.toggle('translate-y-[-50px]');
+        }
+        menuToggle.classList.toggle('active');
+      });
+    }
+
+    // Cambiar tema (modo terminal)
+    function toggleTheme() {
+      document.body.classList.toggle('terminal-mode');
+    }
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    if (themeToggleMobile) {
+      themeToggleMobile.addEventListener('click', toggleTheme);
+    }
+  });
+</script>

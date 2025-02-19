@@ -1,0 +1,292 @@
+---
+const personalInfo = {
+  name: "Martí Corbalan Cruz",
+  title: "Desarrollador Web",
+  description: "Soy una persona apasionada por el desarrollo web, siempre en busca de nuevas oportunidades para seguir creciendo profesionalmente. Tengo experiencia trabajando con tecnologías como HTML, CSS, JavaScript, React, Next.js, Django y Python. He tenido la oportunidad de participar en proyectos de creación y mantenimiento de sitios web, además de implementar sistemas ERP utilizando plataformas como WordPress y Odoo. Mi objetivo es seguir aprendiendo y aportar mis conocimientos en proyectos innovadores.",
+};
+
+const Frontskills = [
+  "HTML", "Astro", "CSS", "JavaScript", "React",
+];
+const backendSkills = [
+  "Nodejs", "Python", "Django", "Figma", "Git"
+];
+const skillIcons = {
+  HTML: "/icons/html.svg",
+  Astro: "/icons/Astro_dark.svg",
+  CSS: "/icons/css.svg",
+  JavaScript: "/icons/javascript.svg",
+  React: "/icons/react.svg",
+  Nodejs: "/icons/nodejs.svg",
+  Python: "/icons/python.svg",
+  Django: "/icons/django.svg",
+  Figma: "/icons/figma.svg",
+  Git: "/icons/git.svg",
+};
+
+const projects = [
+  {
+    title: "Blog de Café",
+    description: "HTML, CSS, JS",
+    image: "/images/blog1.jpg",
+    link: "https://blog-cafe-marti.netlify.app/",
+  },
+  {
+    title: "Festival de música",
+    description: "HTML, CSS, JS",
+    image: "/images/music.jpg",
+    link: "https://festival-musica-corba.netlify.app/",
+  },
+  {
+    title: "Tres en raya",
+    description: "HTML, CSS, JS, REACT",
+    image: "/images/tres_en_raya.jpg",
+    link: "https://marticorbalan.github.io/tres-en-ratlla/",
+  },
+  {
+    title: "Dev Books",
+    description: "HTML, CSS, JS, ASTRO",
+    image: "/images/libros.jpg",
+    link: "https://astro-5-dev-books-2955uro5r-martilluc01-gmailcoms-projects.vercel.app/",
+  },
+  {
+    title: "Mirlo",
+    description: "Work in progress",
+    image: "/images/mirlo.jpg",
+    
+  },
+];
+
+const experiences = [
+{
+    title: "Técnico Informático",
+    company: "Hospital de Mataró",
+    year: "Octubre 2022 - Junio 2023",
+    tasks: [
+      "Soporte en Hardware y Software",
+      "Instalación, mantenimiento y reparación de ordenadores, impresoras...",
+      "Atención al cliente, helpdesk",
+      "Ejecución de pruebas de programas y/o herramientas",
+      "Resolución de incidencias (diagnóstico, resolución y soporte de incidencias)"
+    ]
+  },
+  {
+    title: "Extreme Micro",
+    year: "2021",
+    tasks: [
+      "Desarrollo Web",
+      "ERP Odoo",
+      "Wordpress"
+    ]
+  },
+  {
+  title: "Desarrollador Web",
+  year: "2017 - Present",
+  tasks: [
+    "La Volta Mataró",
+    "Dea Essence",
+    "Saed.cat",
+    "TecnoTrade Group"
+  ]
+},
+  
+  {
+    title: "Técnico Informático",
+    company: "Megastore Datasystem",
+    year: "2017-2018",
+    tasks: [
+      "Soporte en hardware y software",
+      "Instalación, mantenimiento y reparación de ordenadores e impresoras",
+      "Atención al cliente, helpdesk"
+    ]
+  }
+];
+const educacion = [
+  {
+    title: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma",
+    year: "2019-2021",
+    institution: "Centro de estudios",
+  },
+  {
+    title: "Grado Medio en Sistemas Microinformáticos y Redes",
+    year: "2017-2019",
+    institution: "Centro de estudios",
+  }
+];
+
+const contactInfo = [
+  { icon: "📞", label: "Teléfono", value: "602046890" },
+  { icon: "📍", label: "Ubicación", value: "Mataró, Barcelona" },
+  { icon: "✉️", label: "Correo Electrónico", value: "martilluc01@gmail.com" },
+];
+
+const githubLink = "https://github.com/marticorbalan";
+
+---
+<!DOCTYPE html>
+<html class="h-full">
+  <body class="bg-gradient-to-br from-slate-900 to-slate-800 text-white h-full flex items-center justify-center terminal-mode">
+    <main class="max-w-4xl w-full px-4 py-16 title_center">
+
+      <!-- Contenedor del nombre -->
+      <div class="w-full text-center mb-12 title_center wow animate__fadeInLeft">
+        <h1 class="text-6xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent pb-4" id="name">
+          {personalInfo.name}
+        </h1>
+      </div>
+
+      <!-- Contenedor del contenido -->
+      <div class="w-full p-8 bg-slate-800/50 rounded-xl shadow-2xl backdrop-blur-sm space-y-8">
+        <!-- Título y descripción -->
+        <div class="text-center space-y-6">
+          <h2 class="text-4xl font-bold text-pink-400">{personalInfo.title}</h2>
+          <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            {personalInfo.description}
+          </p>
+        </div>
+        <div class="text-center mt-10">
+          <!-- Botón de descarga con animación -->
+          <a href="/path-to-your-cv.pdf" download class="bg-pink-400 text-white text-lg font-semibold py-3 px-6 rounded-lg bounce-button hover:bg-pink-500 hover:scale-110 hover:rotate-3 transition duration-300">
+            Descargar CV
+          </a>
+        </div>
+      </div>
+
+      <!-- proyectos -->
+      <section class="py-12 sm:py-16" id="Proyectos">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-pink-400 mb-6 sm:mb-10">
+          Mis Proyectos
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          {projects.map((project) => (
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src={project.image || "https://via.placeholder.com/400x300"} class="w-full h-52 sm:h-64 object-cover" />
+              <div class="p-4 sm:p-6">
+                <h3 class="text-xl sm:text-2xl font-semibold">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline">
+                    {project.title}
+                  </a>
+                </h3>
+                <p class="text-gray-300 mt-2">{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <div class="w-full p-16 font-mono bg-slate-800/50 rounded-lg mt-20 shadow-2xl backdrop-blur-sm">
+        <h2 class="text-4xl font-bold text-pink-400 mb-6 text-center">~/Habilidades</h2>
+      
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+          <!-- Habilidades de Frontend -->
+          <div>
+            <h3 class="text-2xl font-semibold text-pink-300 mb-4">Frontend</h3>
+            <div class="space-y-6">
+              {Frontskills.map((skill, index) => (
+                <div key={index} class="flex items-center space-x-4">
+                  <img src={skillIcons[skill] || "/icons/default.png"} alt={skill} class="w-6 h-6" />
+                  <span class="text-lg font-semibold">{skill}</span>
+                  <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-pink-400 h-2 rounded-full w-[calc(60%+random_value)]"></div> <!-- Ajustar el porcentaje dinámico -->
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+      
+          <!-- Habilidades de Backend/Otras -->
+          <div>
+            <h3 class="text-2xl font-semibold text-pink-300 mb-4">Backend/Otras</h3>
+            <div class="space-y-6">
+              {backendSkills.map((skill, index) => (
+                <div key={index} class="flex items-center space-x-4">
+                  <img src={skillIcons[skill] || "/icons/default.svg"} alt={skill} class="w-6 h-6" />
+                  <span class="text-lg font-semibold">{skill}</span>
+                  <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-pink-400 h-2 rounded-full w-[calc(60%+random_value)]"></div> <!-- Ajustar el porcentaje dinámico -->
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- experiencia laboral -->
+      <section class="py-16 text-white" id="Experiencia">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center text-pink-400 mb-10">
+            Experiència Laboral
+          </h2>
+          <div class="relative flex flex-col items-start pl-10 before:absolute before:w-1 before:bg-pink-400 before:h-full before:left-3 before:top-0">
+            {experiences.map((job, index) => (
+              <div class="relative w-full flex items-center mb-10">
+                <div class="w-5 h-5 bg-pink-400 rounded-full absolute left-2 top-1/2 transform -translate-y-1/2"></div>
+                <div class="bg-slate-800/50 p-6 rounded-lg shadow-lg ml-10 w-full max-w-lg">
+                  <h3 class="text-2xl font-semibold">{job.title}</h3>
+                  <p class="text-gray-400">{job.company ? `${job.company} (${job.year})` : job.year}</p>
+                  <ul class="mt-4 space-y-2 text-lg text-gray-300">
+                    {job.tasks.map((task) => (
+                      <li class="before:content-['•'] before:mr-2">{task}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+<!-- Educacion -->
+      <section class="py-16 text-white" id="Educacion">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center text-pink-400 mb-10">
+            Educación
+          </h2>
+          <div class="space-y-6">
+            {educacion.map((edu, index) => (
+              <div class="flex items-center space-x-4">
+                <div class="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center">
+                  <span class="text-white font-semibold">{index + 1}</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-pink-400">{edu.title}</h3>
+                  <p class="text-gray-400">{edu.institution} ({edu.year})</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- Sección de Contacto -->
+      <section class="bg-slate-800/50 py-16 rounded-lg shadow-2xl backdrop-blur-sm mt-20" id="Contacto">
+        <div class="container mx-auto px-6 text-white">
+          <h2 class="text-4xl font-bold text-center text-pink-400 mb-8">¡Pongámonos en contacto!</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Información de contacto -->
+            <div class="space-y-6">
+              <p class="text-lg text-slate-300">Si tienes alguna pregunta o deseas hablar sobre una oportunidad, no dudes en ponerte en contacto conmigo.</p>
+              <ul class="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <li key={index} class="flex items-center space-x-4">
+                    <span class="text-pink-400 text-2xl">{info.icon}</span>
+                    <div class="text-lg font-semibold">{info.value}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <!-- GitHub -->
+            <div class="flex flex-col items-center md:items-start justify-center">
+              <h3 class="text-2xl font-semibold text-pink-400 mb-4">Visita mi GitHub</h3>
+              <p class="text-lg text-slate-300 mb-6 text-center md:text-left">Puedes ver algunos de mis proyectos y contribuciones en mi perfil de GitHub. ¡Echa un vistazo a mi trabajo!</p>
+              <a href={githubLink} target="_blank" class="bg-pink-400 text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-pink-500 transition duration-300 text-center md:text-left">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
